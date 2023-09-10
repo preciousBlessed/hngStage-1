@@ -1,0 +1,18 @@
+{
+  "name": "hngstage-1",
+  "version": "1.0.0",
+  "description": "A repo containing my first internship task at HNG",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Precious Chukwuezi",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
