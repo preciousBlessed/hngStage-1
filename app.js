@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000; //set port
 
 //middleware
 app.use(express.json()); //enable parsing json
-app.use("/", firstRoute);
+app.use("/api", firstRoute);
 
 //listen
 app.listen(port, (err) => {
