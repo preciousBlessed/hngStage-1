@@ -16,7 +16,9 @@ firstRoute.get("/", (req, res) => {
     slack_name: req.query.slack_name || "",
     current_day: dow[new Date().getDay()],
     // utc_time: new Date(new Date().getTime() + 60 * 60 * 1000),
-    utc_time: new Date(new Date()),
+    utc_time: new Date()
+      .toISOString()
+      .replace(/\d\d.\d\d\d/, (pat) => Number(pat).toFixed(0)), //special use of regex
     track: req.query.track || "",
     github_file_url:
       "https://github.com/preciousBlessed/hngStage-1/blob/master/app.js",
