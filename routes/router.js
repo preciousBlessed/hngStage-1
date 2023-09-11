@@ -18,7 +18,7 @@ firstRoute.get("/", (req, res) => {
     // utc_time: new Date(new Date().getTime() + 60 * 60 * 1000),
     utc_time: new Date()
       .toISOString()
-      .replace(/\d\d.\d\d\d/, (pat) => Number(pat).toFixed(0)), //special use of regex
+      .replace(/\d\d.\d\d\d/, (pat) => Number(pat).toFixed(0).padStart(2, "0")), //special use of regex
     track: req.query.track || "",
     github_file_url:
       "https://github.com/preciousBlessed/hngStage-1/blob/master/app.js",
